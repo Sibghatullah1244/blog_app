@@ -4,14 +4,16 @@ from langchain_huggingface import HuggingFaceEndpoint
 
 import os
 import os
-os.environ["HUGGINGFACEHUB_API_TOKEN"]="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"
+import os
+
+hf_token = os.getenv("HF_token")
 ## Function to get response from LLaMA 2 model
 def getLLamaresponse(input_text, no_words, blog_style):
     try:
 
         ### LLaMA 2 model
         repo_id="mistralai/Mistral-7B-Instruct-v0.3"
-        llm=HuggingFaceEndpoint(repo_id=repo_id,max_length=128,temperature=0.7,token='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')
+        llm=HuggingFaceEndpoint(repo_id=repo_id,max_length=128,temperature=0.7,token='HF_token')
         
         ## Prompt Template
         template = """
