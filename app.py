@@ -2,8 +2,7 @@ import streamlit as st
 from langchain.prompts import PromptTemplate
 from langchain_huggingface import HuggingFaceEndpoint
 
-import os
-import os
+
 import os
 
 hf_token = os.getenv("HF_token")
