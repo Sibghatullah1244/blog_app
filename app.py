@@ -11,7 +11,7 @@ def getLLamaresponse(input_text, no_words, blog_style):
     try:
 
         ### LLaMA 2 model
-        repo_id="mistralai/Mistral-7B-Instruct-v0.3"
+        repo_id="entbappy/Llama-2-7b-chat-finetune"
         llm=HuggingFaceEndpoint(repo_id=repo_id,max_length=128,temperature=0.7,token='HF_token')
         
         ## Prompt Template
