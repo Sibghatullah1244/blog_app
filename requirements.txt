@@ -4,6 +4,5 @@ ctransformers
 langchain
 python-box
 streamlit
-HuggingFaceEndpoint
 langchain_huggingface
-PromptTemplate
+
