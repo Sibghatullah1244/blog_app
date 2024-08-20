@@ -1,6 +1,5 @@
 import streamlit as st
 from langchain.prompts import PromptTemplate
-from langchain.llms import CTransformers
 from langchain_huggingface import HuggingFaceEndpoint
 
 import os
@@ -9,10 +8,6 @@ os.environ["HUGGINGFACEHUB_API_TOKEN"]="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"
 ## Function to get response from LLaMA 2 model
 def getLLamaresponse(input_text, no_words, blog_style):
     try:
-        # Verify model file exists
-        model_path = 'models/llama-2-7b-chat.ggmlv3.q8_0.bin'
-        if not os.path.exists(model_path):
-            return f"Model file not found: {model_path}"
 
         ### LLaMA 2 model
         repo_id="mistralai/Mistral-7B-Instruct-v0.3"
